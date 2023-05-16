@@ -13,3 +13,15 @@ def checker(var):
     return var
 a = 1234
 checker(a)
+
+class BuldingError(Exception):
+    def __str__(self):
+        return 'щось не те дуже багато'
+
+def chek_material_build(amount, limit):
+    if amount > limit:
+        return 'достатньо матеріалів'
+    else:
+       raise  BuldingError()
+chek_material_build(10, 300)
+
