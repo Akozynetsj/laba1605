@@ -2,6 +2,7 @@
 class InvalidFileFormatError(Exception):
     def __int__(self, f):
         self.f = f
+#FileNotError
     def read_file(f):
         try:
             with open(f, 'r') as file:
@@ -14,4 +15,4 @@ try:
     read_file(input('введіть назіу файлу:'))
 except InvalidFileFormatError as e:
     print(f"невірний формат файлу {e.f}"
-          f"підтримують тільки текстові файли")
+          f"підтримують онлі текстові файли")
