@@ -3,6 +3,7 @@ class InvalidFileFormatError(Exception):
     def __int__(self, f):
         self.f = f
 #FileNotError
+#UnsupportFormatError - коли немає розширення .тхт
     def read_file(f):
         try:
             with open(f, 'r') as file:
